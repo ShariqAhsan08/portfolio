@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&family=Roboto:wght@300;400;500;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'roboto', Courier, monospace;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+    background-color: var(--primary-shades);
+}
+
+:root {
+    --primary-color:#ffa600;
+    --primary-shades: #191100;
+    --para-color: #ffedcc;
+    --helper-color: #ffc14d;
+    --white:#fff;
+    --shade:rgba(154, 110, 17, 0.4);
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    color:var(--para-color);
+    
+}
+
+img{
+    display: inline-block;
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+h1,h2,h3,h4{
+    color: var(--primary-color);
+}
+
+h1,h2{
+    text-transform: capitalize;
+}
+
+.para{
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: var(--para-color);
+}
+
+
+
+/* -----------------
+herader start
+------------------- */
+/* main{
+    position: relative;
+} */
+header{
+    height: 9.6rem;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 0 5.4 rem;
+    position: sticky;
+   
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffa600;
+    
+}
+
+.logo-img{
+    display: flex;
+    align-items: center;
+   
+   
+}
+
+.my-logo{
+    height:50px ;
+    width:50px ;
+    bottom: 0;
+    padding: 1rem;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+    font-size: 1.5rem;
+    
+    
+}
+
+
+.nav-list a{
+    text-transform: capitalize;
+}
+
+.nav-list .navbar-button{
+    
+    padding: 1.2rem 2.4rem;
+    background-color: var(--white);
+    border: 1px solid var(--helper-color);
+    color: var(--helper-color);
+    border-radius: 5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-list .nav-link:hover,
+.nav-list .nav-link:active{
+    color: var(--helper-color);
+}
+
+.navbar-button:hover,
+.navbar-button:active{
+    background-color: var(--helper-color);
+    color: var(--white);
+}
+
+
+.mob-nav-ico{
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+.mobile-nav-button{
+    display: none;
+}
+
+.mobile-nav-button[name="close"]{
+    display: none;
+}
+
+
+/* section reuseable code */
+
+.section{
+    padding: 9.6rem 0;
+}
+.container{
+    max-width: 130rem;
+    margin: 0 auto ;
+    padding: 0 3.2rem;
+}
+
+.grid{
+    display: grid;
+    gap: 9.6rem;
+}
+
+.grid-two-column{
+    grid-template-columns: repeat(2 , 1fr);
+}
+.btn{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    padding: 1.2rem 2.4rem;
+    background-color: var(--helper-color);
+    color: var(--white);
+    transition: all 0.3s linear;
+    border-radius: 5rem;
+}
+.btn:hover, .btn:hover{
+    transform: scale(1.05);
+}
+.my-scetion{
+    position: relative;
+}
+.my-scetion::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 16rem;
+    right: 0;
+    z-index:-1 ;
+    width: 30%;
+    height: 40%;
+    /* background-color: rgba(147, 149, 163, 0.879); */
+    /* background-color: rgba(154, 110, 17, 0.4); */
+    background-color: var(--shade);
+   
+}
+.first-heading{
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.my-scetion .para{
+    margin-top: 2rem;
+    margin-bottom: 3.2rem;
+}
+
+/* .my-icon{
+        margin-top: 4.2rem;
+        color: var(--para-color);
+        
+}
+
+.my-icon .icon{
+    
+    font-size: 5rem;
+    position: relative;
+    
+}
+
+.my-icon .icon::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60%; 
+    background-color: var(--helper-color);
+    color: var(--helper-color);
+    border-radius:.5em;
+    opacity: .8;
+} */
+
+
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.my-icon {
+    margin-top: 4.2rem;
+    color: var(--para-color);
+}
+
+.my-icon .icon {
+    /* margin-top: 0rem; */
+    font-size: 5rem;
+    position: relative;
+    
+    /* Set up the animation */
+    animation: rotate 5s linear infinite; /* Adjust the animation duration as needed */
+}
+
+.my-icon .icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60%; 
+    background-color: var(--helper-color);
+    color: var(--helper-color);
+    border-radius: .5em;
+    opacity: .8;
+}
+
+
+
+
+
+.my-icon h2{
+    /* color:#fff !important; */
+    /* padding-left: 1.5rem; */
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+.my-scetion .my-icon-style .pera{
+    line-height: 1.6rem;
+    font-family: 1.4rem;
+    margin: 0;
+   
+}
+
+/* right section */
+
+.my-image{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.image-hover{
+    position: relative;
+}
+
+.para1{
+    font-size:2.5rem;
+    color: var(--para-color);
+    padding: 2.5rem 5rem;
+    background-color:var(--shade);
+    top: -100px;
+    position: absolute  ;
+    top: 1rem;
+    height: 96%;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 700;
+    line-height: 5rem;
+    opacity: 0;
+    transition: ease-in 1s;
+
+}
+.para1:hover{
+    transform: scale(1.5,1.5) ;
+    opacity: 1;
+}
+
+.my-image img{
+    height: 80%;
+    object-fit: cover ;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.5);
+    /* border: solid 10px rgba(60, 175, 54, 0.555); */
+    border: solid 10px var(--shade);
+    border-radius: 1rem;
+}
+.img-overlay{
+    position: absolute;
+    bottom:-10rem;
+    left:-8%;
+    color: var(--white);
+    text-align: start;
+    /* background-color: var(--primary-color); */
+    background-color: rgba(255, 166, 0, 0.8);
+    padding: 2rem;
+    margin-right: 10rem;
+}
+
+.img-overlay .para{
+    color: var(--white);
+    max-width: fit-content;
+}
+
+.img-overlay .para:nth-child(2){
+        margin: 0;
+        font-weight: bold;
+}
+ 
+.img-overlay .para:nth-child(2){
+    margin: 0;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 5vh;
+    /* background-color: red; */
+   background-color:  rgba(154, 110, 17, 0.8) ;
+    margin: 0 auto;
+}
+
+.social .icon{
+    font-size: 2rem;
+    color: var(--para-color);
+    padding: 0.5rem;  
+    transition: all .5s;
+}
+.social .icon:hover{
+    color: var(--white);
+    transform: scale(2) ;
+}
